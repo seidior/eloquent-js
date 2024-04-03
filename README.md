@@ -43,7 +43,7 @@ Contributions are not accepted at this time.
 
 ## License
 
-Exercises themselves are copyright ©️ 2019 Marijn Haverbeke.
+Exercises themselves are copyright ©️2019 Marijn Haverbeke.
 
 Exercise answers and all other work in this repository is unlicensed.
 
