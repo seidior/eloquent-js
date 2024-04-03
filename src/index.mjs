@@ -1,9 +1,7 @@
 import { lstat, readFile, readdir, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 
-/**
- * @module crawler
- */
+/** @module crawler */
 
 const parentFolder = join(__dirname, "..");
 
@@ -11,7 +9,8 @@ const parentFolder = join(__dirname, "..");
  * Function to crawl a directory for scripts to execute.
  *
  * @param {string} directory - The directory to crawl
- * @returns { Map<string, string> } A map of script names to their execution command.
+ * @returns {Map<string, string>} A map of script names to their execution
+ *   command.
  */
 async function getScripts(directory) {
   const files = await readdir(directory);
@@ -71,9 +70,7 @@ async function getScripts(directory) {
   return Array.from(scripts).sort((a, b) => a[0].localeCompare(b[0]));
 }
 
-/**
- * Function to update package.json scripts list.
- */
+/** Function to update package.json scripts list. */
 async function updatePackageJsonScripts() {
   const packageJsonPath = join(parentFolder, "package.json");
 

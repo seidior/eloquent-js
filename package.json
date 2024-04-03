@@ -1,6 +1,6 @@
 {
   "name": "eloquent-js",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "private": true,
   "type": "module",
   "description": "Exercise answers from Eloquent JavaScript, Third Edition",
@@ -8,10 +8,6 @@
   "repository": "github:seidior/eloquent-js",
   "homepage": "https://github.com/seidior/eloquent-js",
   "scripts": {
-    "resync": "bun .",
-    "format": "prettier -w src",
-    "lint": "DEBUG=eslint:cli-engine eslint src --ext ts,tsx,js,cjs,mjs",
-    "docs": "jsdoc -c .jsdoc.json",
     "postinstall": "bun ."
   },
   "author": {
@@ -29,6 +25,7 @@
     "eslint-config-prettier": "^9.1.0",
     "jsdoc": "^4.0.2",
     "jsdoc-to-markdown": "^8.0.1",
-    "prettier": "^3.2.5"
+    "prettier": "^3.2.5",
+    "prettier-plugin-jsdoc": "^1.3.0"
   }
 }
