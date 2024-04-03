@@ -1,0 +1,26 @@
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.formatOnPaste": false,
+    "editor.formatOnSave": true,
+    "editor.formatOnSaveMode": "file",
+    "editor.tabSize": 4
+  },
+  "cSpell.enabled": false,
+  "editor.codeActionsOnSave": [
+    "source.organizeImports",
+    "source.formatDocument",
+    "source.fixAll.eslint"
+  ],
+  "editor.formatOnSave": true,
+  "eslint.validate": ["javascript", "typescript"],
+  "files.trimTrailingWhitespace": true,
+  "indentRainbow.indicatorStyle": "light",
+  "terminal.integrated.scrollback": 10000,
+  "typescript.preferences.importModuleSpecifier": "non-relative",
+  "typescript.surveys.enabled": false
+}

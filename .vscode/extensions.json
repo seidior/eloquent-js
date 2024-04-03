@@ -1,0 +1,30 @@
+{
+  "recommendations": [
+    "better-ts-errors.better-ts-errors",
+    "bierner.emojisense",
+    "bierner.github-markdown-preview",
+    "bierner.jsdoc-markdown-highlighting",
+    "bierner.markdown-checkbox",
+    "bierner.markdown-emoji",
+    "bierner.markdown-preview-github-styles",
+    "cardinal90.multi-cursor-case-preserve",
+    "chakrounanas.turbo-console-log",
+    "dbaeumer.vscode-eslint",
+    "eamodio.gitlens",
+    "editorconfig.editorconfig",
+    "esbenp.prettier-vscode",
+    "gruntfuggly.todo-tree",
+    "jock.svg",
+    "mechatroner.rainbow-csv",
+    "MylesMurphy.prettify-ts",
+    "ms-vsliveshare.vsliveshare",
+    "oderwat.indent-rainbow",
+    "oven.bun-vscode",
+    "quicktype.quicktype",
+    "rangav.vscode-thunder-client",
+    "streetsidesoftware.code-spell-checker",
+    "timonwong.shellcheck",
+    "tyriar.sort-lines",
+    "usernamehw.errorlens"
+  ]
+}
