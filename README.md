@@ -32,10 +32,11 @@ This includes test code coverage.
 
 Additionally, some helper scripts have been included for convenience:
 
-| helper   | description                    |
-| -------- | ------------------------------ |
-| `lint`   | runs the linter (ESLint)       |
-| `format` | formats all scripts (Prettier) |
+| helper    | description                                      |
+| --------- | ------------------------------------------------ |
+| `lint`    | runs the linter (ESLint)                         |
+| `format`  | formats all scripts (Prettier)                   |
+| `cleanup` | cleans up `package.json` to get ready for commit |
 
 ## Contributing
 
