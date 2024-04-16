@@ -3,14 +3,16 @@ const config = {
   arrowParens: "avoid",
   bracketSameLine: true,
   bracketSpacing: true,
-  plugins: ["prettier-plugin-jsdoc"],
+  endOfLine: "lf",
+  jsxSingleQuote: false,
   printWidth: 80,
   proseWrap: "always",
   semi: true,
   singleQuote: false,
   tabWidth: 2,
   trailingComma: "none",
-  useTabs: false
+  useTabs: false,
+  plugins: ["prettier-plugin-jsdoc"]
 };
 
 export default config;

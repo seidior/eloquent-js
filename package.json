@@ -8,6 +8,11 @@
   "repository": "github:seidior/eloquent-js",
   "homepage": "https://github.com/seidior/eloquent-js",
   "scripts": {
+    "resync": "bun .",
+    "format": "prettier -w src",
+    "lint": "eslint --debug src/",
+    "docs": "jsdoc -c .jsdoc.json",
+    "cleanup": "bun . --no-sync && rm -rf node_modules",
     "postinstall": "bun ."
   },
   "author": {
@@ -19,9 +24,8 @@
     "@types/node": "^20.12.3"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^7.5.0",
-    "@typescript-eslint/parser": "^7.5.0",
-    "eslint": "^8.57.0",
+    "typescript-eslint": "^7.7.0",
+    "eslint": "^9.0.0",
     "eslint-config-prettier": "^9.1.0",
     "jsdoc": "^4.0.2",
     "jsdoc-to-markdown": "^8.0.1",

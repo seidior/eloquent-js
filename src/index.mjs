@@ -70,6 +70,11 @@ async function getScripts(directory) {
   return Array.from(scripts).sort((a, b) => a[0].localeCompare(b[0]));
 }
 
+function hasArg(arg) {
+  const argv = process.argv;
+  return argv.slice(2).indexOf(arg) !== -1;
+}
+
 /** Function to update package.json scripts list. */
 async function updatePackageJsonScripts() {
   const packageJsonPath = join(parentFolder, "package.json");
@@ -79,16 +84,19 @@ async function updatePackageJsonScripts() {
 
     packageJsonContent.scripts = {};
 
-    // Get scripts and add to content
-    const scripts = await getScripts(__dirname);
-    for (let [key, value] of scripts) packageJsonContent.scripts[key] = value;
+    if (hasArg("--no-sync") === false) {
+      // Get scripts and add to content
+      const scripts = await getScripts(__dirname);
+      for (let [key, value] of scripts) packageJsonContent.scripts[key] = value;
+    }
 
     // Add additional scripts
     packageJsonContent.scripts["resync"] = "bun .";
     packageJsonContent.scripts["format"] = "prettier -w src";
-    packageJsonContent.scripts["lint"] =
-      `DEBUG=eslint:cli-engine eslint src --ext ts,tsx,js,cjs,mjs`;
+    packageJsonContent.scripts["lint"] = "eslint --debug src/";
     packageJsonContent.scripts["docs"] = "jsdoc -c .jsdoc.json";
+    packageJsonContent.scripts["cleanup"] =
+      "bun . --no-sync && rm -rf node_modules";
     packageJsonContent.scripts["postinstall"] = "bun .";
 
     // Write back updated scripts to file
@@ -101,6 +109,8 @@ async function updatePackageJsonScripts() {
   }
 }
 
-await updatePackageJsonScripts()
-  .then(() => console.log("Successfully updated package.json."))
-  .catch(err => console.error("Error in updatePackageJsonScripts:", err));
+if (import.meta.url === "file://" + __dirname + "/index.mjs") {
+  await updatePackageJsonScripts()
+    .then(() => console.log("Successfully updated package.json."))
+    .catch(err => console.error("Error in updatePackageJsonScripts:", err));
+}
